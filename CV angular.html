@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<head>
+<META NAME="AUTHOR" CONTENT="DIDOT Damien">
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<title>CV Damien DIDOT</title>
+<link rel="stylesheet" href="style/cv3.css">
+
+
+
+</head>
+
+<body onload="loadFunction()">
+<header> 
+  CV
+</header>
+<nav>
+<spam>Change Style :</spam> 
+<section class="bp">
+<button  type="button"  class="css1" onclick="changeCSS('style/cv1.css', 0)">Classic</button>
+<button  type="button"  class="css2" onclick="changeCSS('style/cv2.css', 0)">Tab</button>
+<button  type="button"  class="css3" onclick="changeCSS('style/cv3.css', 0)">article</button>
+</section>
+
+<section class="resumList" id="resumList">
+<h1> resum</h1><section id="resumComp" class="resumComp">empty</section>
+<section class="resumListUl"><ul id="resumListUl" class="resumListUl"></ul></section>
+</section>
+
+
+</nav>
+
+<main>
+
+
+<section class="name">
+	<h1>Damien DIDOT</h1>
+	<p>
+	  Mobile: 0274246932
+	  <br/>
+	  Email:<a href="mailto:ddidot@free.fr">ddidot@free.fr</a>
+	</p>
+</section>	
+
+
+
+
+<section class="intro">
+Well-organized, highly motivated to work in an English speaking country. I have a Master's degree in IT and over 10 years experience in computing. Have a strong knowledge of each step of the IT product life cycle: I am familiar with  designing IT solution, scripting codes, testing, packaging solution, issues analysis and code source optimization. The last 5 years I have been specialized in performance optimization.  Self-motivated, resourceful I like to interact with other people to understand what they need and how I can propose the best  IT response.       
+</section>	
+
+<form class="main-form" autocomplete="off">
+
+
+<div ng-app="myApp" ng-controller="myCtrl"> 
+
+<p>Today's welcome message is:</p>
+<h1>{{myWelcome}}</h1>
+
+</div>
+
+	
+<!--  ul class="mainList" ng-app="myApp" ng-controller="customersCtrl">
+ <li ng-repeat="x in datas" class="mainList"><h2>{{ x.MainList }}</h2></li>
+</ul--> 
+ 
+	
+<!-- ul class="mainList">
+   <li class="mainList"><h2>Education</h2>
+	<ul>
+   		<li><h4>Master's degree IT</h4> <span>CNAM, Paris, France (August 2010)</span> 
+  			<br/><cite>Completed electronics and computer science in apprenticeship. Studied electronics high frequency system at James Cook University TownVille Australia (2 months).</cite>
+  		</li>
+ 		<li><h4>Ordinary degrees in electronic and computing</h4> <span>IUT Velizy, Velizy, France (August 2007)</span>
+ 		</li> 
+ 		<li><h4>A level electronic and computing with Honors</h4> <span>St Nicolas, Paris, France (August 2005)</span>
+ 		</li> 
+ 		<li><h4>BTEC First Diploma electrician</h4>  <span>St Nicolas, Paris, France (August 2005)</span>
+ 	    </li> 
+  
+	</ul>
+	</li>
+	
+<li class="mainList"><h2>Professional Experience</h2>
+		<ul>
+			<li><h4>2013-2014 Application designer small communality shop</h4>
+  				<cite>Volunteer for the museumum's shop in French Guiana. This shop promotes local producers and artisan works.</cite>
+  				<ul><li><spam>Management was manual. Designed software to reference items, stock, sale</spam></li>
+  				    <li><spam>Created automatic monthly reporting using system Libre Office Suite</spam></li>
+  				    <li><spam>Assisted local cacao producer to grow his business</spam></li>
+  				    <li><spam>Maintained production mechanical equipment</spam></li>
+   				</ul>
+			</li>
+			<li><h4>2008-2013 Responsible for accounting software, Galeries Lafayette, Paris, France</h4>
+				<cite>Galeries Lafayette is an upmarket French department store chain. Responsible for IT maintaining and evolution of bookkeeping module of the Oracle Retail ERP.</cite>
+ 				<ul>
+ 					<li><spam>Defined with customer the road map of new version</spam></li>
+ 					<li><spam>Wrote technical detailed specifications</spam></li>
+				 	<li><spam>Developed gap or managed offshore development</spam></li>
+				 	<li><spam>Managed sources code with using version control system</spam></li> 
+				 	<li><spam>Track bug and analyze cause of issues</spam></li> 
+				 	<li><spam>Fixed issues</spam></li> 
+				 	<li><spam>Created no-regressions tests</spam></li> 
+				 	<li><spam>Plan new program version</spam></li> 
+				 	<li><spam>Carry out integration tests and final packaging</spam></li> 
+				 	<li><spam>Routine checks and control batches performance</spam></li>
+				 	<li><spam>Made special data's analysis and create custom data's report</spam></li>   
+				   
+				<cite>Worked with Oracle Database version 9 and 11g and used SQL PL-SQL and pro-C language User interface of Bookkeeping module was developed in Java Struts technologies.
+Major Achievement: 
+Improved applicational response time and java code performance by reshaping dynamical sql code optimized data base performance (adding indexes, reshape database tables). Replaced Java batches by PL-SQL batches. Improved night execution from 6 hours delay to 2 hours delay.      
+				</cite>
+				</ul>
+			</li>
+			<li><h4>2006-2008 Application maker (Java J2EE), ALDATA, Paris, France</h4>
+					<cite>ALDATA is the French leader of retail IT solution whit the ERP name GOLD</cite>
+			 	<ul>
+				<cite>My job consisted of: </cite>
+			 	<li><spam>Developing new functionality according to technical specification</spam></li> 
+			 	<li><spam>Testing my codes and wrote unit test specifications</spam></li>
+			 	<li><spam>investigating issues causes and fixing the bugs</spam></li>
+			 	<cite>I worked on Java J2EE language and Oracle 9 database version
+				Major Achievement: 
+				Repected planning delays. Did good quality codes</cite>
+				</ul>
+		</li>
+		<li><h4>2002-2006 Web developer (apprenticeship), AIR LIQUIDE, Paris, France</h4>
+			<cite>Air Liquide is a world leader in gases, technologies and services</cite>
+			 	<ul>
+				<cite>Worked on internal web application use to make report form customer's gaz consumption. I had two different missions:</cite>
+				<li><spam>Migrated of Access database to SQL server 2000 database</spam></li> 
+			 	<li><spam>adapted SQL procedure</spam></li>
+			 	<li><spam>rebuilder html web pages</spam></li>
+			 	 
+				<cite>The second part of my job consisted of creating a new website and processing to tract gas cylinder. I had to do :</cite>
+			 	
+			 	<li><spam>Designe local workshop database and main database</spam></li>
+			 	<li><spam>Write Automatic datas synchronization scripts</spam></li>
+			 	<li><spam>Create the web site to show data to customer</spam></li>
+			 	<li><spam>Create a dynamical report edition</spam></li>
+			 	
+				<cite>I used Php solution to generate dynamic HTML pages and dynamic SQL query.
+				
+				Major Achievement: 
+				Designing full application program still used today</cite>
+				</ul>
+			</li>
+			<li><h4>1999-2002 Electronic conception (apprenticeship), APLES, Paris France</h4>
+			<cite>I had to design an electrical inverter to plug small wind turbine to the power network.</cite>
+			</li>
+			</ul>
+</li>
+<li class="mainList"><h2>Skills</h2>
+	<ul>
+		<li ><h3>Technical skills</h3>
+				<ul>
+				  <li><h4>DataBase</h4>
+				     <ul>
+				        <li><spam>oracle 9i and 11g database management</spam></li>
+						<li><spam>SQL query optimization</spam></li>
+						<li><spam>PL-SQL</spam></li>
+						<li><spam>Pro-C</spam></li>        
+				     </ul></li>
+				   <li><h4>Java</h4>  
+				     <ul> 
+				    	<li><spam>Java J2EE</spam></li>
+				    	<li><spam>Java STRUST</spam></li>
+				    	<li><spam>JunitTest</spam></li>
+				    	<li><spam>Script ANT</spam></li> 
+				     </ul></li>
+				   <li><h4>Web</h4> 
+				     <ul>
+				       <li><spam>HTML</spam></li>
+				       <li><spam>CSS</spam></li>
+				       <li><spam>XML</spam></li>
+				       <li><spam>JavaScript</spam></li>
+				       <li><spam>PHP</spam></li>
+				     </ul></li>
+				   <li><h4>Other</h4>
+				     <ul>
+				     	<li><spam>Unix shell Script</spam></li>
+				     	<li><spam>VB Script</spam></li>
+				     	<li><spam>OOO Script</spam></li>
+				     	<li><spam>C</spam></li>
+				     </ul></li>
+				<li><h4>development software's</h4>    
+				 	<ul>
+				 	<li><spam>IDE Eclipse I used for java development and packaging whit ANT scripting</spam></li>
+				 	<li><spam>Toad software for data base management</spam></li> 
+				 	<li><spam>JIRA Project management software to manage issues and new version gap. <br/>I created some custom workflow on it and users accreditation</spam></li>
+				 	<li><spam>GIT and SVN version control system</spam></li>
+				 	</ul>
+				</li> 	
+				</ul>
+	   </li>
+       <li><h3>Analyzing</h3>
+			<ul>
+			<li><spam>I have a great intellectual curiosity</spam>
+			<cite> Understanding how it is works is essential to success.<br/> In my way of thinking, is important to me to learn from users how it is to work and what they really need. In my job it is helps me to design the most appropriate IT technical response. During my studies I learnt many disciplines like mechanic, electricity and electronic, I liked it. I like DIY and repairing things. Cars break down, electrical problems at home … rather than a problem it is always a new challenge for me and in most of case I succeed in fixing it.
+			</cite>
+			</li>
+			</ul>
+		</li>
+		<li><h3>Relationship</h3>
+			<ul>
+			<li><spam>I have good relationship  Enjoy speaking with people</spam>
+			<cite> I love to explaining the art of computing by choosing daily life examples every one can understand. To put oneself in the position of the audience is the best way to have constructive exchange.
+			</cite>
+			</li>
+			</ul>
+		</li>
+		<li><h3>Time management</h3>
+			<ul>
+			<li><spam>I have worked on many IT projects and I acquired good time management</spam>
+			<cite> To be able to deliver bug fix in respect at planning dates is crucial for me.
+			</cite>
+			</li>
+			</ul>   
+		</li>
+		<li><h3>Language skill</h3>
+		<ul><li><spam>French: mother tongue</spam></li>                                             
+		    <li><spam>English: IELTS 6.5 (Competent user)</spam></li>
+		</ul>
+	</li>
+	</ul>	
+</li>
+<li class="mainList"><h2>Interests and Hobbies</h2>
+<ul>
+ 	<li><spam>Active outdoor person</spam><spam> I practice surfing, paragliding, climbing, sailing, biking, running</spam></li>
+ 	<li><spam>I appreciate wildlife</spam><spam> I practice bird watching and enjoy walking in nature</spam></li>
+ 	<li><spam>I have an interest in photography</spam><spam> I have a professional camera reflex</spam></li>
+ 	<li><spam>I like to DIY</spam><spam> I have good level in electricity, plumbing, woodwork, welding, painting...
+ 	<br/>I renovate my grandmother house in France, all by myself</spam></li>
+</ul> 
+</li>	
+<li class="mainList"><h2>Referees</h2>
+	<ul>
+	<li><spam>Referees available on request</spam></li>
+	</ul>
+</li>
+</ul-->
+</form>
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+</main>
+
+
+<!-- JavaScript -->
+<script>
+
+var buttonViewLabel="View";
+var buttonHideLabel="Hide";
+
+
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+    $http.get("welcome.htm")
+    .then(function(response) {
+        $scope.myWelcome = response.data;
+    });
+});
+
+
+/*var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+   $http.get("CVdata.htm")
+   .then(function (response) {$scope.datas = response.data.records;});
+});*/
+
+function loadFunction(){
+	//add inputs boxs at eacth LI who have UL childNode
+	// Input Box ViewHide
+	var ulList=document.getElementsByTagName("UL");
+	for (i = 0; i < ulList.length; i++) {
+		parentNode = ulList[i].parentNode
+		
+		if( parentNode.tagName!="FORM" && parentNode.tagName!="SECTION") {
+			//add input box
+			var newNode = document.createElement("input");
+		    newNode.id = "ViewHide_"+i; // add ID 
+		    newNode.className = "viewHide";
+		    newNode.title = "show or hide";
+		    newNode.type = "checkbox";
+		   // parentNode.insertBefore(newNode, parentNode.firstChild);
+		   parentNode.insertBefore(newNode, ulList[i]);
+		   newNode = document.createElement("spam");
+		   parentNode.insertBefore(newNode, ulList[i]);
+		    
+		}
+		
+	}
+	
+	// add inputs box at each LI who haven't any childNode
+	//  Input Box CheckResum
+	var idDrag=0;
+	var liList=document.getElementsByTagName("LI");
+	for (i = 0; i < liList.length; i++) {
+		if( liList[i].getElementsByTagName("UL").length==0) {
+			//add input box
+			var newNode = document.createElement("input");
+		    newNode.id = "CheckResum_"+i; // add ID 
+		    newNode.className = "checkResum";
+		    newNode.title = "add to resum list";
+		    newNode.type = "checkbox";
+		    newNode.onclick = function() {checkResum(this)};
+		    liList[i].insertBefore(newNode, liList[i].firstChild);		    
+		}
+		// add draggable when class = mainList
+		if (liList[i].className =="mainList" ){
+			liList[i].id = "Drag"+ idDrag;
+			idDrag ++;
+			liList[i].draggable="true";			
+		}
+		
+		
+	}
+	
+}
+
+
+function changeCSS(cssFile, cssLinkIndex) {
+	 
+    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+
+    var newlink = document.createElement("link");
+    newlink.setAttribute("rel", "stylesheet");
+    newlink.setAttribute("type", "text/css");
+    newlink.setAttribute("href", cssFile);
+
+    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+  }
+  
+  
+  //resumlist content
+  function checkResum(node){
+	  var resumId = node.id+"resum";
+	  var newNode=null;	  
+	  if (node.checked==true){
+		  // find the mainlist title <H4>
+		  var mainListNode = node;
+		  while (mainListNode.className != "mainList" && mainListNode.tagName !="HTML") {
+			        mainListNode=mainListNode.parentNode;
+	       }
+		  var h4Title = mainListNode.getElementsByTagName("H2")[0].innerHTML;
+		 // check if title every exist in resumList
+		 var resumListeUl = document.getElementById("resumListUl");
+		 var resumListUlLi=null;
+		 var resumListUlNodes = resumListeUl.getElementsByTagName("LI");
+		 for (x = 0; x < resumListUlNodes.length; x++) {
+	          if (resumListUlNodes[x].firstChild.textContent==h4Title)
+	        	  resumListUlLi=resumListUlNodes[x];
+		 }
+		 // add title if is not existing
+		 if (resumListUlLi==null){
+			 newNode = document.createElement("li");
+			 resumListeUl.appendChild(newNode);  
+			 newNode.innerHTML=h4Title;
+			 resumListUlLi=newNode;
+			 newNode = document.createElement("ul");
+			 resumListUlLi.appendChild(newNode);  
+		 }
+		 
+		 
+	  // add content to resumList  
+	     //create new elementList
+	     newNode = document.createElement("li");
+	     // add ID used to delete when uncheck
+	     newNode.id = resumId;
+	     newNode.className = "resumListItem"
+	    // create link
+	    //var link = document.createElement("a");
+	    //link.href="#"+node.id
+	    //newNode.appendChild(link);
+	    //link.innerHTML = node.parentNode.childNodes[1].innerHTML;
+	   
+	    newNode.innerHTML = node.parentNode.childNodes[1].innerHTML;
+		 
+	     // add new node to the resum List
+	     resumListUlLi.getElementsByTagName("UL")[0].appendChild(newNode);  
+	  }     
+	         
+	  else{
+		// delete content to resumList  
+		var child = document.getElementById(resumId);
+		var parent = child.parentNode;
+		if (child.parentNode.childNodes.length==1 ){
+			// remouve li->ul->li
+			parent = child.parentNode.parentNode.parentNode;
+			child =  child.parentNode.parentNode;
+		}
+		parent.removeChild(child);
+				
+	  }	
+	  
+	  //update the compt
+	  var nb = document.getElementById("resumListUl").getElementsByClassName("resumListItem").length;
+	  if (nb>0){
+	    document.getElementById("resumComp").innerHTML =  nb;
+	  }
+	  else document.getElementById("resumComp").innerHTML =  "empty ";
+	  
+  }
+  
+  // -------------------------------drag drop----------------------------------------------------- 
+
+  
+  
+  
+  document.addEventListener("dragstart", function(event) {
+    // The dataTransfer.setData() method sets the data type and the value of the dragged data
+    event.dataTransfer.setData("Text", getMainList(event.target).id);
+    // Change the opacity of the draggable element
+    event.target.style.opacity = "0.5";
+});
+
+// While dragging the p element, change the color of the output text
+//document.addEventListener("drag", function(event) {
+//    document.getElementById("demo").style.color = "red";
+//});
+
+// Output some text when finished dragging the p element and reset the opacity
+document.addEventListener("dragend", function(event) {
+   event.target.style.opacity = "1";
+});
+
+
+/* Events fired on the drop target */
+
+// When the draggable p element enters the droptarget, change the DIVS's border style
+/*document.addEventListener("dragenter", function(event) {
+    if ( event.target.className == "mainList" ) {
+        event.target.style.border = "3px dotted red";
+    }
+});*/
+
+//When the draggable p element leaves the droptarget, reset the DIVS's border style
+/*document.addEventListener("dragleave", function(event) {
+    if ( event.target.className == "mainList" ) {
+        event.target.style.border = "";
+    }
+});*/
+
+
+// By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element
+document.addEventListener("dragover", function(event) {
+    event.preventDefault();
+});
+
+
+/* On drop - Prevent the browser default handling of the data (default is open as link on drop)
+   Reset the color of the output text and DIV's border color
+   Get the dragged data with the dataTransfer.getData() method
+   The dragged data is the id of the dragged element ("drag1")
+   Append the dragged element into the drop element
+*/
+document.addEventListener("drop", function(event) {
+    event.preventDefault();
+    var node = getMainList(event.target);
+    if ( node.className == "mainList" ) {
+    	 var data = event.dataTransfer.getData("Text");
+       var nodeMouved =  document.getElementById(data); 
+       //find dir of the mouve
+       var dirMouve = getDirMouve(nodeMouved,node);        
+       insertNodeBeforeAfter(nodeMouved,node,dirMouve);
+       
+    }
+});
+ 
+
+function getMainList(node){
+	
+	while (node.className != "mainList" && node.tagName !="HTML") {
+		node=node.parentNode;
+	}
+	return node;
+}
+
+function getDirMouve(node1,node2){
+	liNodes = node1.parentNode.childNodes;
+	for (x = 0; x < liNodes.length; x++) {
+		  if(liNodes[x] === node1)   return "right" ;
+		  if(liNodes[x] === node2)   return "left" ;   
+    }	   
+	return "undef";
+}
+  
+ function insertNodeBeforeAfter(nodeMouved,node,dirMouve){
+	 
+	 if (dirMouve=="right")	  node = node.nextElementSibling;
+	 if (node == null)		  nodeMouved.parentNode.appendChild(nodeMouved);
+	 else                     node.parentNode.insertBefore(nodeMouved,node);
+ }
+		 
+		 
+	 
+	 
+  
+  
+</script>
+
+
+</body>
+</html>
