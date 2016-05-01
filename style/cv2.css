@@ -1,0 +1,364 @@
+@CHARSET "ISO-8859-1";
+
+header{
+	position: relative;
+	z-index: 100;
+	width: 75%;
+    height: 30px;
+    text-align: left;
+    font-size: 150%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 50px;
+    
+    background-color:#cccccc;
+    color: #73AD21;
+}
+
+nav {
+	position: absolute;
+	top : 30px;
+	left :0px;
+    z-index: 100;
+    height: 100%;
+	font-size: 80%;
+	background-color:#cccccc;	
+}
+
+
+
+
+main {
+	position: relative;
+	top:0;
+	left:150px;
+	color: #6060ca;  
+   
+}
+
+
+body {
+	padding: 0px;
+	margin: 0px; 
+	background-color:white;
+    font-family: "Lucida Sans", "Lucida Grande", "Lucida;
+    
+    
+}
+
+/* name */
+
+section.name {
+	display: inline-block;
+	margin: 30px 0px 0px 30px;
+	padding: 0px;
+}
+
+
+section.name h1 {
+	display: block;
+	text-align: left;
+	font-size: 250%;
+		
+}
+
+section.name p  {
+	display:  block;
+    width: 24%;
+   	    
+}
+
+/* main */
+
+main h2 {
+	text-align: center;
+	font-size: 150%;
+}
+
+
+section.intro{
+	display: inline-block;
+	float: rigth;
+	width: 650px;
+	/*border-radius: 25px;
+    border: 2px solid #73AD21;*/
+    padding: 10px 10px 10px 10px;
+    margin : 50px 100px 0px 0px;
+    font-size: 80%;
+	text-align: justify;
+}
+
+h4 {
+	display: inline-block;
+	font-size: 90%;
+	text-align: left;
+	margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    	
+}
+
+h3 {
+	display: inline-block;
+	text-align: left;
+	margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    	
+}
+
+span {
+	width: 100%;
+  	font-size: 80%;
+	margin: 0px 0px 0px 50px;
+}
+
+
+
+cite {
+	width: 100%;
+    font-size: 80%;
+	margin: 0px 30px 0px 0px;
+}
+
+/* input CheckResum */
+input.checkResum {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	margin: 0px 0px 0px -30px;
+	z-index: 20;
+	opacity: 0;
+	cursor: pointer;
+}
+
+
+
+input.checkResum + ::before{
+	position: absolute;
+	margin: 0px 0px 0px -30px;
+	vertical-align: middle;
+	width: 22px;
+	height: 22px;
+	content: url("style2/resumbox.svg");
+	-webkit-transition:  -webkit-transform 1s; /* Safari */
+    transition: -webkit-transform 1s;
+}
+
+
+input.checkResum:checked + ::before{
+	content: url("style2/resumboxCheck.svg");
+	 -webkit-transform: rotateY(180deg); /* Safari */
+    transform: rotateY(180deg);
+}
+
+
+
+/* input viewHide */
+input.viewHide {
+	position: absolute;
+	top: 0px;
+	left: 20px;
+	width: 40px;
+	height: 40px;
+	z-index: 2;
+	opacity: 0;
+	cursor: pointer;
+}
+
+input.viewHide +spam{
+	position: absolute;
+	top: 0px;
+	left: 20px;
+	width: 40px;
+	height: 40px;
+	opacity: 1;
+	background-image: url("style2/viewHideBoxHide.svg");
+	
+   	   
+}
+
+
+li.mainList > input.viewHide {
+	display: none;	
+}
+
+li.mainList  > input.viewHide +spam{
+	display: none;	
+}
+
+li.mainList ul  input.viewHide:checked +spam+ ul{
+	display: none;
+}
+
+
+li.mainList ul  input.viewHide:checked +spam{
+	
+    background-image: url("style2/viewHideBoxView.svg");
+	
+}
+
+
+
+
+
+/* nav  */
+
+nav section.bp{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+
+nav button {
+	display: block;
+	width: 80px;
+}
+ 
+/* resumList */
+
+
+section.resumList {
+	display: inline-block;
+	min-height: 150px;
+	float: right;
+	z-index: 1;
+	border-radius: 25px;
+    border: 2px solid #4CAF50;
+    padding: 0px;
+	margin: 100px 30px 0px 0px; 
+}
+
+
+
+section.resumList h1{
+	position: relative;
+	top : 120px;
+	left :0px;
+	height: 30px;
+	margin: 0px;
+	padding: 0px;
+	width: 30px;
+	    -ms-transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+        -ms-transform: rotate(270deg); /* IE 9 */
+    -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+           transform: rotate(270deg);	
+ }
+
+
+	
+section.resumComp {
+	position: relative;
+	top : 20px;
+	left :0px;
+	height: 30px;
+	width: 30px;
+	padding: 0px;
+	margin: 0px;
+        -ms-transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+        -ms-transform: rotate(270deg); /* IE 9 */
+    -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+           transform: rotate(270deg);	  
+}
+
+
+ul.resumListUl li {	
+	margin: 0px;
+    padding: 0px;
+}	
+ul.resumListUl{
+ margin: 0px;
+ padding: 0px;	
+ display: inline-block;
+} 
+
+section.resumListUl  {
+	display: none;
+	list-style-type: none;
+	padding: 0px;
+	margin:-60px 20px 0px 45px;	 		
+}
+
+
+nav:hover  section.resumListUl {
+	display: block;
+}
+
+
+/* mainList */
+li.mainList > ul{
+	position: static;
+	display: none;
+	background-color:#efeffa;
+	width: 1370px;
+	border: 2px solid #afafe4;
+	border-style: hidden solid  solid solid;
+	z-index:2;
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+
+
+
+ul.mainList {
+	margin: 0px;
+    padding: 0px; 
+}
+
+li.mainList{
+	display:  inline;
+	float : left;
+	border-radius: 30px 30px 0px 0px;
+    border: 2px solid #afafe4;
+    margin: 0px 0px 0px 4px;
+    padding: 0px 20px 0px 20px;
+    background-color:#fcfcfe;
+    color: #6060ca;  
+    width: 210px;
+   
+}
+
+li.mainList h2 {
+	font-size: 17px;
+	margin: 0px;
+    padding: 5px;
+   	
+}
+ul.mainList > li:nth-child(1)> ul{	margin-left : -22px; padding-top: 20px} 
+ul.mainList > li:nth-child(2)> ul{	margin-left : -280px;padding-top: 20px} /*(-44px-210px-4px)*1-22px*/
+ul.mainList > li:nth-child(3)> ul{	margin-left : -538px;padding-top: 20px} /*(-44px-210px-4px)*2-22px  -> -258*/
+ul.mainList > li:nth-child(4)> ul{	margin-left : -796px;padding-top: 20px} /*(-44px-210px-4px)*3-22px */
+ul.mainList > li:nth-child(5)> ul{	margin-left : -1054px;padding-top: 20px} /*(-44px-210px-4px)*4-22px */
+*/
+
+/*ul.mainList > li:nth-child(1)> ul {display:  block;}
+ul.mainList:hover > li:nth-child(1)> ul {display:  none;}
+*/
+
+li.mainList:hover{
+	background-color:#efeffa;
+	border-style: solid solid hidden solid;
+}
+
+li.mainList:hover ul{
+	display:  block;	
+}
+
+
+li{
+	position: relative;
+	display: block;
+	padding:   0px 0px 0px 50px; 
+}
+
+li h4  {
+	display:  block;    
+}
+
+li h3  {
+	display:  block;
+   
+}
+
