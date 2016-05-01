@@ -8,7 +8,7 @@
 <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
 <title>CV Damien DIDOT</title>
-<link rel="stylesheet" href="style/cv3.css">
+<link rel="stylesheet" href="style/cv1.css">
 
 
 
@@ -56,17 +56,10 @@ Well-organized, highly motivated to work in an English speaking country. I have 
 <form class="main-form" autocomplete="off">
 
 
-<div ng-app="myApp" ng-controller="myCtrl"> 
-
-<p>Today's welcome message is:</p>
-<h1>{{myWelcome}}</h1>
-
-</div>
-
 	
-<!--  ul class="mainList" ng-app="myApp" ng-controller="customersCtrl">
- <li ng-repeat="x in datas" class="mainList"><h2>{{ x.MainList }}</h2></li>
-</ul--> 
+<ul class="mainList" ng-app="dataApp" ng-controller="dataCtrl">
+ <li class="mainList" ng-repeat="x in mydatas" class="mainList"><h2>{{ x.Title }}</h2></li>
+</ul> 
  
 	
 <!-- ul class="mainList">
@@ -256,20 +249,14 @@ var buttonViewLabel="View";
 var buttonHideLabel="Hide";
 
 
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope, $http) {
-    $http.get("welcome.htm")
+var app = angular.module('dataApp', []);
+app.controller('dataCtrl', function($scope, $http) {
+    $http.get("https://raw.githubusercontent.com/didotdamien/myCV/master/CVdata.htm")
     .then(function(response) {
-        $scope.myWelcome = response.data;
-    });
+        $scope.mydatas = response.data.records;});
 });
 
 
-/*var app = angular.module('myApp', []);
-app.controller('customersCtrl', function($scope, $http) {
-   $http.get("CVdata.htm")
-   .then(function (response) {$scope.datas = response.data.records;});
-});*/
 
 function loadFunction(){
 	//add inputs boxs at eacth LI who have UL childNode
